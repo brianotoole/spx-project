@@ -1,0 +1,60 @@
+// Content
+// Major layout classes for managing the structural hierarchy of the site.
+
+.content-wrap {
+  flex: 1;
+  -ms-flex: 1 0 auto; //damn you, IE
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+.content-wrap-post {
+  padding-top: calc-em(40px);
+  @media (min-width: $bp-medium) {
+    padding-top: calc-em(65px);
+  }
+}
+
+.content {
+  padding-top: calc-em(20px);
+  padding-bottom: calc-em(20px);
+  margin-bottom: calc-em(60px);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $container-max-width; // em
+  width: $container-width; // %
+  &.sm {
+	@media (min-width: $bp-medium) {
+	  width: 65%;
+	}
+  }
+}
+
+.grid-flex-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: calc-em(20px);
+  position: relative;
+  margin: auto;
+  @media (min-width: $bp-large) {
+    justify-content: space-between;
+  }
+  > div {
+    display: block;
+    width: 100%;
+    margin-bottom: calc-em(20px);
+    @media (min-width: $bp-medium) {
+	  width: calc(50% - 20px);
+	}
+	@media (min-width: $bp-large) {
+	  width: calc(33% - 10px);
+	}
+  }
+}

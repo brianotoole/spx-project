@@ -1,0 +1,276 @@
+/**
+ * @section Overrides
+ * Nudge and tweak alignment, spacing, and visibility.
+ */
+
+
+/**
+ * Text sizes
+ */
+
+.text-small {
+	font-size: calc-em(15px);
+}
+
+.text-large {
+	font-size: calc-em(19px);
+	line-height: 1.4;
+
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(21px);
+	}
+}
+
+
+/**
+ * Text colors
+ */
+
+.text-primary {
+  color: $color-primary;
+}
+.text-accent {
+  color: $color-accent;
+}
+.text-white {
+  color: $color-white;
+}
+.text-muted {
+  color: $color-gray-dark;
+}
+.text-error {
+  color: $color-error;
+}
+.text-success {
+  color: $color-success;
+}
+.bg-primary {
+  background: $color-primary;
+}
+.bg-accent {
+  background: $color-accent;
+}
+.bg-white {
+  background: $color-white;
+}
+.bg-gray {
+  background: $color-gray-light;
+}
+
+.section-title {
+  &.text-white {
+	border-color: $color-white;
+  }
+}
+
+.border-white {
+  border-color: $color-white;
+}
+
+
+/**
+ * Text alignment
+ */
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+@media (min-width: $bp-medium) {
+	.text-right-medium {
+		text-align: right;
+	}
+}
+
+
+/**
+ * Floats
+ */
+
+.float-left {
+	float: left;
+}
+
+.float-center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.float-right {
+    float: none;
+	@media (min-width: $bp-medium) {float: right;}
+}
+
+
+/**
+ * Margins
+ */
+
+.no-margin-top {
+	margin-top: 0;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.margin-top {
+	margin-top: $spacing;
+}
+
+.margin-bottom {
+	margin-bottom: $spacing;
+}
+
+.margin-bottom-small {
+	margin-bottom: calc-em(8px);
+}
+
+.margin-bottom-large {
+	margin-bottom: calc-em(32px);
+}
+
+
+/**
+ * Visibility
+ */
+
+.screen-reader {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.screen-reader-focusable:active,
+.screen-reader-focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+[hidden] {
+	display: none;
+	visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.hidden-sm {
+  display: block;
+  @media (max-width: $bp-medium) {
+    display: none;
+  }
+}
+.visible-sm {
+  display: none;
+  @media (max-width: $bp-medium) {
+    display: inline-block;
+  }
+}
+.block-sm {
+  @media (max-width: $bp-medium) {
+    display: block;
+  }
+}
+.visible-xs {
+  display: none;
+  @media (max-width: $bp-small) {
+    display: inline-block;
+  }
+}
+
+// Pads & layouts
+.padded {
+  @media (min-width: $bp-medium) {
+    padding: 0 calc-em(50px);
+  }
+}
+.pad {
+  padding: calc-em(40px) 0 calc-em(60px);
+  @media (min-width: $bp-medium) {
+    padding: calc-em(60px) 0;
+  }
+  &.xl {
+	padding: calc-em(100px) 0;
+  }
+}
+.pad-top {
+  padding: calc-em(80px) 0 0;
+}
+.pad-bottom {
+  padding: 0 0 calc-em(80px);
+}
+.position-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/**
+ * Padding
+ */
+
+.no-padding-top {
+	padding-top: 0;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0;
+}
+
+.padding-top {
+	padding-top: $spacing;
+}
+
+.padding-top-small {
+	padding-top: calc-em(8px);
+}
+
+.padding-top-large {
+	padding-top: calc-em(32px);
+}
+
+.padding-bottom {
+	padding-bottom: $spacing;
+}
+
+.padding-bottom-small {
+	padding-bottom: calc-em(8px);
+}
+
+.padding-bottom-large {
+	padding-bottom: calc-em(32px);
+}
+.pad-left-0 {
+  @media (min-width: $bp-medium) { padding-left: 0;}
+}
+.pad-right-0 {
+  @media (min-width: $bp-medium) { padding-right: 0; }
+}
+.pad-0 {
+  @media (min-width: $bp-medium) { padding: 0; }
+}

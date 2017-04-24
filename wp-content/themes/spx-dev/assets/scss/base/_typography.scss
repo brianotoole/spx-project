@@ -1,0 +1,253 @@
+/**
+ * @section Typography
+ * Sets font styles for entire site
+ */
+
+body {
+	background: $color-white;
+	color: $color-body;
+	font-family: $font-primary; 
+	font-size: $font-size; //use relative sizings for everything; body = 100% or 16px
+	font-weight: normal;
+	line-height: 1.5;
+	//sticky footer using flex: https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+	@media (min-width: $bp-medium) {
+		line-height: 1.5625;
+	}
+}
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+	font-family: $font-secondary; 
+	font-weight: normal;
+	line-height: 1.2;
+	//margin: 0 0 1em;
+	//padding: 1em 0 0;
+	word-wrap: break-word;
+}
+
+h1,
+.h1 {
+	font-size: calc-em(32px);
+	font-weight: 700;
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(62px);
+	}
+}
+h2,
+.h2 {
+	font-size: calc-em(28px);
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(36px);
+	}
+}
+h3,
+.h3 {
+	font-size: calc-em(24px);
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(32px);
+	}
+}
+h4,
+.h4 {
+	font-size: calc-em(22px);
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(26px);
+	}
+}
+h5,
+.h5 {
+	font-size: calc-em(18px);
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(20px);
+	}
+}
+h6,
+.h6 {
+	font-size: calc-em(16px);
+}
+p {
+    font-size: calc-em(16px);
+	margin: 0 0 $spacing;
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(18px);
+	}
+}
+a {
+	background-color: transparent;
+	color: $color-link;
+	text-decoration: none;
+	word-wrap: break-word;
+	-webkit-text-decoration-skip: objects; 
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: darken( $color-primary, 15% );
+		text-decoration: underline;
+	}
+}
+
+a.link-block {
+	color: $color-black;
+	display: block;
+	text-decoration: none;
+}
+
+.link-block-styled {
+	@extend a;
+
+	.link-block:hover & {
+		@extend a:hover;
+	}
+}
+
+ul,
+ol {
+	margin: 0 0 $spacing calc-em(32px);
+	padding: 0;
+	font-size: calc-em(16px);
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(18px);
+	}
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+dl,
+dd {
+	margin: 0;
+	padding: 0;
+}
+
+dd {
+	margin-bottom: $spacing;
+}
+
+dt {
+	font-weight: bold;
+}
+
+.list-unstyled {
+	margin-left: 0;
+	list-style: none;
+}
+
+/**
+ * Display lists on a single line.
+ */
+
+.list-inline {
+	list-style: none;
+	margin-left: calc-em(-8px);
+	margin-right: calc-em(-8px);
+	padding: 0;
+}
+
+.list-inline > li {
+	display: inline;
+	margin-left: calc-em(8px);
+	margin-right: calc-em(8px);
+}
+
+hr {
+	border: 0;
+	border-top: calc-em(1px) solid $color-gray-light;
+	border-bottom: 0 solid $color-white;
+	box-sizing: content-box;
+	margin: calc-em(32px) auto;
+	overflow: visible;
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+	font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+	font-weight: bolder;
+}
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+dfn {
+	font-style: italic;
+}
+mark {
+	background: #ff0;
+	color: #000000;
+}
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+blockquote {
+	font-size: calc-em(19px);
+	font-style: italic;
+	margin: 0 0 $spacing;
+	padding-left: calc-em(16px, 19px);
+	padding-right: calc-em(16px, 19px);
+	border-left: 2px solid $color-primary;
+
+	cite {
+		color: $color-gray-dark;
+		font-size: calc-em(16px, 19px);
+		padding-top: calc-em(16px);
+	}
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+}
+
+// Page titles
+.section-title {
+  padding-bottom: calc-em(10px);
+  border-bottom: 2px solid $color-gray;
+  color: $color-gray;
+}

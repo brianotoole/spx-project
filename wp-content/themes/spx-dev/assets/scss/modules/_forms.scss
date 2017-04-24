@@ -1,0 +1,179 @@
+/**
+ * @section Forms
+ * Styling for form elements.
+ */
+
+form,
+fieldset {
+	margin-bottom: $spacing;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
+legend,
+label {
+	display: block;
+	font-weight: normal;
+	margin: 0 0 calc-em(5px);
+	padding: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: lighten( $color-black, 18% );
+	font: inherit;
+	margin: 0;
+	padding: calc-em(5px);
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+input,
+textarea,
+select {
+	border: 2px solid $color-gray-dark;
+	border-radius: calc-em(1px);
+	display: block;
+	line-height: calc-em(30px);
+	margin-bottom: calc-em(20px);
+	padding: calc-em(15px) calc-em(10px) calc-em(15px) calc-em(25px);
+	width: 100%;
+
+	@media (min-width: $bp-medium) {
+		line-height: 1.5625;
+	}
+	
+}
+optgroup {
+	font-weight: bold;
+}
+
+form button,
+form .button {
+	margin-bottom: calc-em(20px);
+}
+
+textarea {
+	height: 12em;
+	overflow: auto;
+}
+
+[type="image"],
+[type="checkbox"],
+[type="radio"] {
+	cursor: pointer;
+	display: inline-block;
+	height: auto;
+	margin-bottom: calc-em(5px);
+	padding: 0;
+	width: auto;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input:focus,
+textarea:focus {
+	border-color: $color-primary;
+	outline: 0;
+	//outline: thin dotted \9;
+	-webkit-appearance: none;
+    appearance: none;
+}
+
+[type="file"]:focus,
+[type="checkbox"]:focus,
+select:focus {
+	outline: thin dotted;
+	outline: calc-em(5px) auto -webkit-focus-ring-color;
+	outline-offset: calc-em(-2px);
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+::-webkit-file-upload-button {
+	-webkit-appearance: button; 
+	font: inherit;
+}
+
+.input-inline {
+	display: inline-block;
+	vertical-align: middle;
+	width: auto;
+}
+
+.input-condensed {
+	padding: calc-em(1px) calc-em(5px);
+	font-size: calc-em(15px);
+}
+
+[type="search"] {
+	-webkit-appearance: textfield; 
+	outline-offset: -2px; 
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+
+.input-search {
+	width: 85%;
+	padding-left: calc-em(15px);
+	padding-right: calc-em(40px);
+	border-radius: calc-em(21px);
+	transition: width 300ms ease-in;
+
+	@media (min-width: $bp-medium) {
+		width: 65%;
+	}
+}
+
+
+.btn-search {
+	display: inline;
+	color: $color-gray-dark;
+	border: none;
+	background: none;
+	margin-left: calc-em(-40px);
+	margin-bottom: 0;
+
+	.icon {
+		fill: $color-gray-dark;
+	}
+
+	&:hover {
+		color: darken( $color-gray-dark, 15% );
+
+		.icon {
+			fill: darken( $color-gray-dark, 15% );
+		}
+	}
+}

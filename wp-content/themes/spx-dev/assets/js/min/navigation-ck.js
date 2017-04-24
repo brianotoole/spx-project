@@ -1,0 +1,1 @@
+$(document).ready(function(){function n(){1==c?(a.removeClass("active"),c=!1):(a.addClass("active"),c=!0)}var a=$(".nav-toggle a"),c=!1;a.click(function(){n()}),$(a).click(function(){$(".menu-wrapper").toggleClass("open")})});

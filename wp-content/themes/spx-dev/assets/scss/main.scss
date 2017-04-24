@@ -1,0 +1,25 @@
+// Main
+// using SMACSS as methodology for organization
+
+// Base
+@import "base/config", //variables
+        "base/mixins", 
+        "base/normalize", //get browsers on same page
+        "base/print", //printer rules
+        "base/typography"; //headings
+
+// Layouts
+@import "layouts/grid",
+        "layouts/content", //primary content & major layout classes
+        "layouts/header",
+        "layouts/footer";
+
+// Layouts, page-specific
+@import "layouts/page";
+
+// Modules
+@import "modules/buttons",
+        "modules/forms";
+
+// States
+@import "states/helpers";

@@ -1,0 +1,62 @@
+// Hero
+.hero { 
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: $color-black;
+  background-image: url('assets/img/hero.png');
+  background-position: center center;    
+  background-repeat: no-repeat;
+  @media (min-width: $bp-medium) {
+    height: calc-em(475px);
+  }
+  
+  .hero-body {
+    @media (min-width: $bp-medium) {
+	&:after {
+	content: '';
+	background-image: url('assets/img/squares.png');
+	background-size: 40%;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0;
+	left: -19%;
+	width: 100%;
+	height: 217px;
+	}
+	}
+  }
+  .title {
+    position: relative;
+    margin-bottom: 0;
+    padding: 20px 0 20px;
+    z-index: 1;
+    @media (min-width: $bp-medium) {
+      padding: 100px 0 30px;
+    }  
+    &.pad-sm {
+	  padding: calc-em(160px) 0 calc-em(40px);
+	  @media (min-width: $bp-medium) {
+        padding: calc-em(180px) 0 calc-em(40px);
+      }  
+    }
+ 
+  }
+  .hero-title {
+	margin-bottom: 0;
+  }
+  .hero-tagline {
+	padding-top: calc-em(25px);
+	@media (min-width: $bp-medium) {
+	  font-size: calc-em(20px);
+    }
+  }
+}
+
+.subtitle {
+	  @media (max-width: $bp-medium) {
+	    padding-bottom: calc-em(20px);
+	  }
+    }

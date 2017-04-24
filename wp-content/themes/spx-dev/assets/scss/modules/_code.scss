@@ -1,0 +1,35 @@
+/**
+ * @section Code
+ * Styling for code and preformatted text.
+ */
+
+ code,
+ kbd,
+ pre,
+ samp {
+ 	border-radius: calc-em(1px);
+	font-family: $font-monospace;
+	font-size: calc-em(14px);
+	@media (min-width: $bp-medium) {
+      font-size: calc-em(16px);
+	}
+}
+
+code {
+	background-color: $color-gray-light;
+	color: $color-code;
+	padding: calc-em(4px);
+	word-wrap: break-word;
+}
+
+pre {
+	background-color: $color-gray-light;
+	display: block;
+	line-height: 1.5;
+	margin-bottom: $spacing;
+	overflow: auto;
+	padding: calc-em(13px);
+	tab-size: 4;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
